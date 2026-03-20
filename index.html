@@ -7,9 +7,6 @@
   <meta name="description" content="Gua Sha électrique 4-en-1 : chaleur 45°C, micro-courants EMS, vibration haute fréquence. Résultats visibles dès J+1. Livraison offerte France.">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    /* PAGE-SPECIFIC */
-
-    /* HERO */
     .hero-section {
       min-height: calc(100vh - 100px);
       display: grid;
@@ -20,244 +17,187 @@
       gap: 72px;
       align-items: center;
     }
-
     .hero-left { display: flex; flex-direction: column; gap: 26px; }
-
     .hero-badges { display: flex; gap: 8px; flex-wrap: wrap; }
-
-    .hero-title { margin-bottom: 4px; }
-
-    .hero-proof {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 14px 18px;
-      background: var(--bg3);
-      border: 1px solid var(--border2);
-      border-radius: var(--r);
+    .hero-title { font-size: clamp(36px, 5.5vw, 62px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; }
+    .hero-title .grad {
+      background: linear-gradient(135deg, #C8A8F0, #7B61FF);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
-
+    .hero-proof {
+      display: flex; align-items: center; gap: 14px;
+      padding: 14px 18px; background: var(--bg3);
+      border: 1px solid var(--border2); border-radius: var(--r);
+    }
     .proof-avatars { display: flex; }
     .proof-av {
-      width: 30px; height: 30px;
-      border-radius: 50%;
-      background: var(--accent-bg);
-      border: 2px solid var(--bg3);
+      width: 30px; height: 30px; border-radius: 50%;
+      background: var(--accent-bg); border: 2px solid var(--bg3);
       display: flex; align-items: center; justify-content: center;
       font-size: 11px; font-weight: 700; color: var(--accent);
       margin-left: -7px;
     }
     .proof-av:first-child { margin-left: 0; }
-
     .proof-info strong { display: block; font-size: 13px; font-weight: 600; }
     .proof-info span { font-size: 12px; color: var(--text2); }
-    .proof-stars { margin-left: auto; color: #F5C842; letter-spacing: 1px; font-size: 13px; }
-
+    .proof-stars { margin-left: auto; color: #F5C842; font-size: 13px; letter-spacing: 1px; }
     .hero-price-row { display: flex; align-items: center; gap: 14px; }
     .price-main { font-size: 46px; font-weight: 800; letter-spacing: -0.03em; }
-    .price-old  { font-size: 22px; color: var(--text3); text-decoration: line-through; }
+    .price-old { font-size: 22px; color: var(--text3); text-decoration: line-through; }
     .price-save {
-      background: var(--green-bg);
-      border: 1px solid rgba(62,207,160,0.25);
-      color: var(--green);
-      font-size: 12px; font-weight: 700;
+      background: var(--green-bg); border: 1px solid rgba(62,207,160,0.25);
+      color: var(--green); font-size: 12px; font-weight: 700;
       padding: 5px 12px; border-radius: 20px;
     }
-
     .hero-btns { display: flex; flex-direction: column; gap: 10px; }
+    .hero-micro { display: flex; gap: 20px; flex-wrap: wrap; }
+    .hero-micro-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text2); }
 
-    .hero-micro {
-      display: flex; gap: 20px; flex-wrap: wrap;
-    }
-    .hero-micro-item {
-      display: flex; align-items: center; gap: 6px;
-      font-size: 12px; color: var(--text2);
-    }
-
-    /* HERO RIGHT */
+    /* HERO RIGHT — IMAGE PRINCIPALE */
     .hero-right { position: relative; }
-
     .hero-img-wrap {
-      border-radius: var(--r-xl);
-      overflow: hidden;
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      aspect-ratio: 4/5;
-      position: relative;
+      border-radius: var(--r-xl); overflow: hidden;
+      background: var(--bg3); border: 1px solid var(--border);
+      aspect-ratio: 3/4; position: relative;
     }
-    .hero-img-wrap img { width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease; }
+    .hero-img-wrap img { width:100%; height:100%; object-fit:cover; object-position: center top; transition: transform 0.5s ease; }
     .hero-img-wrap:hover img { transform: scale(1.03); }
 
     .float-card {
-      position: absolute;
-      background: rgba(11,11,15,0.9);
-      backdrop-filter: blur(16px);
-      border: 1px solid var(--border2);
-      border-radius: var(--r);
-      padding: 12px 16px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      position: absolute; background: rgba(11,11,15,0.9);
+      backdrop-filter: blur(16px); border: 1px solid var(--border2);
+      border-radius: var(--r); padding: 12px 16px;
+      display: flex; align-items: center; gap: 10px;
     }
-
-    .float-top { top: 20px; right: -24px; }
-    .float-bottom { bottom: 20px; left: -24px; }
-
+    .float-top { top: 20px; right: -20px; }
+    .float-bottom { bottom: 20px; left: -20px; }
     .float-icon {
-      width: 36px; height: 36px;
-      background: var(--accent-bg);
-      border: 1px solid var(--accent-border);
-      border-radius: var(--r-sm);
+      width: 36px; height: 36px; background: var(--accent-bg);
+      border: 1px solid var(--accent-border); border-radius: var(--r-sm);
       display: flex; align-items: center; justify-content: center;
       font-size: 18px; flex-shrink: 0;
     }
     .float-info strong { display: block; font-size: 13px; font-weight: 600; }
-    .float-info span   { font-size: 11px; color: var(--text2); }
+    .float-info span { font-size: 11px; color: var(--text2); }
 
-    /* LOGOS BAR */
+    /* LOGOS */
     .logos-bar {
-      background: var(--bg2);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 22px 28px;
+      background: var(--bg2); border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border); padding: 22px 28px;
     }
     .logos-inner {
-      max-width: 1000px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
+      max-width: 1000px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: center;
+      gap: 12px; flex-wrap: wrap;
     }
     .logos-label { font-size: 11px; color: var(--text3); font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
     .logo-pill {
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      border-radius: var(--r-sm);
-      padding: 7px 16px;
+      background: var(--bg3); border: 1px solid var(--border);
+      border-radius: var(--r-sm); padding: 7px 16px;
       font-size: 11px; font-weight: 600; color: var(--text2); letter-spacing: 0.06em;
     }
 
     /* PROBLEM */
     .problem-section { background: var(--bg2); }
-    .problem-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
+    .problem-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
     .problem-num {
-      font-size: 54px; font-weight: 800;
-      letter-spacing: -0.04em;
-      line-height: 1;
-      margin-bottom: 16px;
+      font-size: 54px; font-weight: 800; letter-spacing: -0.04em;
+      line-height: 1; margin-bottom: 16px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
     .problem-card h3 { margin-bottom: 10px; }
 
-    /* FEATURES SHOWCASE */
-    .showcase-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
+    /* SHOWCASE — 3 colonnes d'images */
+    .showcase-section { padding: 96px 0; }
+    .showcase-inner {
+      max-width: 1160px; margin: 0 auto; padding: 0 28px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
     }
     .showcase-imgs {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
     }
     .showcase-img {
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      border-radius: var(--r);
-      overflow: hidden;
-      aspect-ratio: 1;
+      background: var(--bg3); border: 1px solid var(--border);
+      border-radius: var(--r); overflow: hidden;
     }
-    .showcase-img img { width:100%; height:100%; object-fit:cover; transition: transform 0.4s; }
+    .showcase-img.tall { grid-row: 1 / 3; }
+    .showcase-img img { width:100%; height:100%; object-fit:cover; display:block; transition: transform 0.4s; }
     .showcase-img:hover img { transform: scale(1.06); }
-    .showcase-img.wide { grid-column: 1/3; aspect-ratio: 2/1; }
+    .showcase-img.tall { aspect-ratio: auto; }
+    .showcase-img:not(.tall) { aspect-ratio: 1; }
 
-    .feat-list { display: flex; flex-direction: column; gap: 12px; }
+    .feat-list { display: flex; flex-direction: column; gap: 12px; margin-top: 28px; }
     .feat-item {
       display: flex; gap: 14px; align-items: flex-start;
-      padding: 16px 18px;
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      border-radius: var(--r);
+      padding: 16px 18px; background: var(--bg3);
+      border: 1px solid var(--border); border-radius: var(--r);
       transition: border-color 0.2s;
     }
     .feat-item:hover { border-color: var(--accent-border); }
     .feat-icon {
-      width: 42px; height: 42px;
-      background: var(--accent-bg);
-      border: 1px solid var(--accent-border);
-      border-radius: var(--r-sm);
+      width: 42px; height: 42px; background: var(--accent-bg);
+      border: 1px solid var(--accent-border); border-radius: var(--r-sm);
       display: flex; align-items: center; justify-content: center;
       font-size: 21px; flex-shrink: 0;
     }
     .feat-body strong { display: block; font-size: 14px; font-weight: 600; margin-bottom: 3px; }
     .feat-body span { font-size: 13px; color: var(--text2); line-height: 1.5; }
     .feat-tag {
-      display: inline-block; margin-top: 6px;
-      font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
-      color: var(--accent); background: var(--accent-bg);
-      padding: 2px 8px; border-radius: 4px;
+      display: inline-block; margin-top: 6px; font-size: 10px;
+      font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--accent); background: var(--accent-bg); padding: 2px 8px; border-radius: 4px;
     }
 
-    /* BEFORE/AFTER */
-    .ba-section { background: var(--bg2); }
-    .ba-wrap {
-      display: grid;
-      grid-template-columns: 1fr 48px 1fr;
-      max-width: 760px;
-      margin: 0 auto;
-      border-radius: var(--r-lg);
-      overflow: hidden;
-      border: 1px solid var(--border);
+    /* BEFORE/AFTER — image product-5 */
+    .ba-section { background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .ba-inner { max-width: 1160px; margin: 0 auto; padding: 96px 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+    .ba-image-wrap {
+      border-radius: var(--r-xl); overflow: hidden;
+      border: 1px solid var(--border); aspect-ratio: 16/9;
     }
-    .ba-col { padding: 40px 32px; }
-    .ba-before { background: var(--bg3); }
-    .ba-after  { background: linear-gradient(140deg, #110B1F, #17121F); }
-    .ba-sep {
-      display: flex; align-items: center; justify-content: center;
-      background: var(--border); position: relative;
-    }
-    .ba-vs {
-      position: absolute;
-      background: var(--bg4);
-      border: 1px solid var(--border2);
-      border-radius: 20px;
-      padding: 5px 10px;
-      font-size: 11px; font-weight: 700; color: var(--text2); letter-spacing: 0.05em;
-    }
-    .ba-label {
-      font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
-      font-weight: 700; color: var(--text3); margin-bottom: 22px;
-    }
-    .ba-after .ba-label { color: var(--accent); }
+    .ba-image-wrap img { width:100%; height:100%; object-fit:cover; object-position: center; }
+    .ba-content { display: flex; flex-direction: column; gap: 20px; }
     .ba-items { display: flex; flex-direction: column; gap: 8px; }
+    .ba-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
     .ba-item {
       padding: 10px 14px; border-radius: var(--r-sm);
       font-size: 13px; font-weight: 500;
     }
-    .ba-before .ba-item { background: rgba(255,255,255,0.04); color: var(--text2); }
-    .ba-after  .ba-item { background: rgba(123,97,255,0.07); color: var(--text); }
-    .ba-after  .ba-item.win { background: rgba(123,97,255,0.14); color: var(--accent); border: 1px solid var(--accent-border); }
+    .ba-before-item { background: rgba(255,255,255,0.04); color: var(--text2); }
+    .ba-after-item { background: rgba(123,97,255,0.12); color: var(--accent); border: 1px solid var(--accent-border); }
+    .ba-labels { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 4px; }
+    .ba-label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+    .ba-label.before { color: var(--text3); }
+    .ba-label.after { color: var(--accent); }
+
+    /* LIFESTYLE MIRROR — image product-5 (miroir salle de bain) */
+    .lifestyle-section { padding: 96px 0; }
+    .lifestyle-inner {
+      max-width: 1160px; margin: 0 auto; padding: 0 28px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center;
+    }
+    .lifestyle-img {
+      border-radius: var(--r-xl); overflow: hidden;
+      border: 1px solid var(--border); aspect-ratio: 4/3;
+    }
+    .lifestyle-img img { width:100%; height:100%; object-fit:cover; object-position: center top; }
+    .lifestyle-content { display: flex; flex-direction: column; gap: 20px; }
 
     /* REVIEWS */
-    .reviews-section { background: var(--bg2); }
+    .reviews-section { background: var(--bg2); border-top: 1px solid var(--border); }
     .reviews-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
-    .review-stars { margin-bottom: 10px; }
+    .review-card { display: flex; flex-direction: column; }
+    .review-stars { color: #F5C842; letter-spacing: 2px; font-size: 14px; margin-bottom: 10px; }
     .review-title { font-size: 15px; font-weight: 600; margin-bottom: 10px; }
-    .review-text  { font-size: 13px; color: var(--text2); line-height: 1.7; flex: 1; }
+    .review-text { font-size: 13px; color: var(--text2); line-height: 1.7; flex: 1; }
     .review-footer {
       display: flex; align-items: center; justify-content: space-between;
       padding-top: 14px; border-top: 1px solid var(--border); margin-top: 14px;
     }
     .rev-av {
-      width: 34px; height: 34px;
-      background: var(--accent-bg); border: 1px solid var(--accent-border);
-      border-radius: 50%;
+      width: 34px; height: 34px; background: var(--accent-bg);
+      border: 1px solid var(--accent-border); border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       font-size: 13px; font-weight: 700; color: var(--accent);
     }
@@ -265,12 +205,14 @@
     .rev-date { font-size: 11px; color: var(--text3); }
     .rev-verified { font-size: 11px; color: var(--green); font-weight: 600; }
 
+    /* COMPARE */
+    .compare-section { padding: 96px 0; max-width: 1000px; margin: 0 auto; padding: 96px 28px; }
+
     /* GUARANTEE */
     .g-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; }
     .g-icon {
-      width: 54px; height: 54px;
-      background: var(--accent-bg); border: 1px solid var(--accent-border);
-      border-radius: 14px;
+      width: 54px; height: 54px; background: var(--accent-bg);
+      border: 1px solid var(--accent-border); border-radius: 14px;
       display: flex; align-items: center; justify-content: center;
       font-size: 26px; margin: 0 auto 14px;
     }
@@ -280,26 +222,28 @@
     /* FINAL CTA */
     .final-section {
       background: linear-gradient(140deg, #0F0B1C, var(--bg) 60%);
-      border-top: 1px solid var(--border);
-      padding: 96px 0;
-      text-align: center;
+      border-top: 1px solid var(--border); padding: 96px 0; text-align: center;
     }
 
     /* RESPONSIVE */
     @media (max-width: 960px) {
       .hero-section { grid-template-columns: 1fr; gap: 40px; padding: 40px 18px; min-height: auto; }
       .float-card { display: none; }
-      .showcase-grid { grid-template-columns: 1fr; gap: 40px; }
+      .hero-img-wrap { aspect-ratio: 4/3; }
+      .showcase-inner { grid-template-columns: 1fr; gap: 40px; padding: 64px 18px; }
+      .ba-inner { grid-template-columns: 1fr; gap: 40px; padding: 64px 18px; }
+      .lifestyle-inner { grid-template-columns: 1fr; gap: 40px; padding: 64px 18px; }
       .problem-grid { grid-template-columns: 1fr; }
       .reviews-grid { grid-template-columns: 1fr; }
       .g-grid { grid-template-columns: 1fr 1fr; }
-      .ba-wrap { grid-template-columns: 1fr; }
-      .ba-sep { display: none; }
     }
     @media (max-width: 640px) {
-      .hero-section { padding: 32px 14px; }
-      .showcase-imgs { display: none; }
+      .hero-section { padding: 28px 14px; }
       .g-grid { grid-template-columns: 1fr; }
+      .ba-row { grid-template-columns: 1fr; }
+      .ba-labels { grid-template-columns: 1fr; }
+      .showcase-imgs { grid-template-columns: 1fr; }
+      .showcase-img.tall { aspect-ratio: 4/3; }
     }
   </style>
 </head>
@@ -315,7 +259,7 @@
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">Sky<span>nira</span></a>
     <ul class="nav-links">
-      <li><a href="index.html" class="nav-link">Accueil</a></li>
+      <li><a href="index.html" class="nav-link" style="color:var(--text)">Accueil</a></li>
       <li><a href="product.html" class="nav-link">Le Produit</a></li>
       <li><a href="faq.html" class="nav-link">FAQ</a></li>
       <li><a href="contact.html" class="nav-link">Contact</a></li>
@@ -330,7 +274,7 @@
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- ═══ HERO ═══ -->
 <section class="hero-section" id="hero">
   <div class="hero-left">
     <div class="hero-badges animate-up d1">
@@ -340,11 +284,11 @@
 
     <h1 class="hero-title animate-up d2">
       Le lifting visage<br>professionnel.<br>
-      <span class="glow-text">Chez toi.</span>
+      <span class="grad">Chez toi.</span>
     </h1>
 
-    <p class="animate-up d3" style="font-size:17px;max-width:460px">
-      Technologie 4-en-1 : chaleur 45°C, micro-courants EMS, vibration haute fréquence.<br>Résultats visibles dès la première utilisation.
+    <p class="animate-up d3" style="font-size:17px;max-width:460px;color:var(--text2);line-height:1.7">
+      Technologie 4-en-1 : chaleur 45°C, micro-courants EMS,<br>vibration haute fréquence. Résultats visibles dès J+1.
     </p>
 
     <div class="hero-proof animate-up d4">
@@ -380,9 +324,10 @@
     </div>
   </div>
 
+  <!-- IMAGE HERO — packshot premium fond noir -->
   <div class="hero-right animate-up d3">
     <div class="hero-img-wrap">
-      <img src="images/hero.jpg" alt="Skynira Gua Sha Pro 4-en-1" onerror="this.style.minHeight='500px'">
+      <img src="image/hero.jpg" alt="Skynira Gua Sha Pro 4-en-1 — packshot premium">
     </div>
     <div class="float-card float-top">
       <div class="float-icon">⚡</div>
@@ -409,134 +354,169 @@
   </div>
 </div>
 
-<!-- PROBLÈME -->
+<!-- ═══ PROBLÈME ═══ -->
 <section class="problem-section section" id="probleme">
   <div class="container">
     <div class="section-header" data-reveal>
       <span class="eyebrow">Le constat</span>
-      <h2>Les soins pro sont <span class="glow-text">hors de prix.</span></h2>
-      <p class="sub">Des milliers de femmes paient des centaines d'euros chaque mois pour ce que tu peux faire chez toi en 5 minutes.</p>
+      <h2 class="section-title">Les soins pro sont <span class="glow-text">hors de prix.</span></h2>
+      <p class="section-sub">Des milliers de femmes paient des centaines d'euros chaque mois pour ce que tu peux faire chez toi en 5 minutes.</p>
     </div>
     <div class="problem-grid">
       <div class="card" data-reveal data-delay="1">
-        <div class="problem-num glow-text">150€</div>
+        <div class="problem-num">150€</div>
         <h3>Prix d'une séance lifting en institut</h3>
-        <p style="margin-top:10px">Et plusieurs séances par mois pour maintenir le résultat. La technologie professionnelle était réservée à quelques-unes.</p>
+        <p style="margin-top:10px;color:var(--text2)">Et plusieurs séances par mois pour maintenir le résultat. La technologie professionnelle était réservée à quelques-unes.</p>
       </div>
       <div class="card" data-reveal data-delay="2">
-        <div class="problem-num glow-text">5 min</div>
+        <div class="problem-num">5 min</div>
         <h3>C'est tout ce qu'il faut par jour</h3>
-        <p style="margin-top:10px">Pas besoin d'une heure de soin. 5 minutes le matin avec Skynira, et tu attaques ta journée avec un visage transformé.</p>
+        <p style="margin-top:10px;color:var(--text2)">Pas besoin d'une heure de soin. 5 minutes le matin avec Skynira, et tu attaques ta journée avec un visage transformé.</p>
       </div>
       <div class="card" data-reveal data-delay="3">
-        <div class="problem-num glow-text">J+1</div>
+        <div class="problem-num">J+1</div>
         <h3>Résultats visibles dès la première fois</h3>
-        <p style="margin-top:10px">Contrairement aux crèmes, les micro-courants EMS et la chaleur agissent immédiatement sur les muscles et les tissus.</p>
+        <p style="margin-top:10px;color:var(--text2)">Contrairement aux crèmes, les micro-courants EMS et la chaleur agissent immédiatement sur les muscles et les tissus.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SHOWCASE -->
-<section class="section" id="produit">
-  <div class="container">
-    <div class="showcase-grid">
-      <div class="showcase-imgs" data-reveal>
-        <div class="showcase-img wide">
-          <img src="images/product-1.jpg" alt="Skynira 4-en-1" onerror="this.style.background='var(--bg3)'">
+<!-- ═══ SHOWCASE PRODUIT — image lifestyle + features ═══ -->
+<section class="showcase-section" id="produit">
+  <div class="showcase-inner">
+    <!-- GRILLE D'IMAGES : product-1 (lifestyle femme) + product-2 (macro chaleur) -->
+    <div class="showcase-imgs" data-reveal>
+      <div class="showcase-img tall">
+        <img src="image/product-1.jpg" alt="Skynira — utilisation sur le visage, effet chaleur">
+      </div>
+      <div class="showcase-img">
+        <img src="image/product-2.jpg" alt="Skynira — macro chaleur infrarouge sur la peau">
+      </div>
+      <div class="showcase-img">
+        <img src="image/product-3.jpg" alt="Skynira — flat lay produit avec accessoires">
+      </div>
+    </div>
+
+    <div data-reveal data-delay="2">
+      <span class="eyebrow" style="margin-bottom:18px;display:inline-flex">✦ Technologie 4-en-1</span>
+      <h2 class="section-title">4 technologies pro.<br><span class="glow-text">Un seul appareil.</span></h2>
+      <div class="feat-list">
+        <div class="feat-item">
+          <div class="feat-icon">🔥</div>
+          <div class="feat-body">
+            <strong>Chaleur thérapeutique 45°C</strong>
+            <span>Dilate les pores, active la microcirculation. Les soins pénètrent 3× plus profondément.</span>
+            <div class="feat-tag">Infrarouge profond</div>
+          </div>
         </div>
-        <div class="showcase-img">
-          <img src="images/product-2.jpg" alt="Chaleur 45°C" onerror="this.style.background='var(--bg3)'">
+        <div class="feat-item">
+          <div class="feat-icon">⚡</div>
+          <div class="feat-body">
+            <strong>Micro-courants EMS haute fréquence</strong>
+            <span>Stimule les 43 muscles du visage. Lifting naturel visible sans aiguille ni douleur.</span>
+            <div class="feat-tag">EMS professionnel</div>
+          </div>
         </div>
-        <div class="showcase-img">
-          <img src="images/product-3.jpg" alt="EMS" onerror="this.style.background='var(--bg3)'">
+        <div class="feat-item">
+          <div class="feat-icon">〜</div>
+          <div class="feat-body">
+            <strong>Vibration 8 000 cycles/min</strong>
+            <span>Drainage lymphatique complet. Réduit les poches et le double menton en 5 min.</span>
+            <div class="feat-tag">8 000 RPM</div>
+          </div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon">🎛️</div>
+          <div class="feat-body">
+            <strong>4 modes ajustables · USB</strong>
+            <span>Personnalise l'intensité. Batterie longue durée, charge USB universelle.</span>
+            <div class="feat-tag">Plug & Play</div>
+          </div>
         </div>
       </div>
-      <div data-reveal data-delay="2">
-        <span class="eyebrow" style="margin-bottom:18px;display:inline-flex">✦ Technologie 4-en-1</span>
-        <h2 style="margin-bottom:28px">4 technologies pro.<br><span class="glow-text">Un seul appareil.</span></h2>
-        <div class="feat-list">
-          <div class="feat-item">
-            <div class="feat-icon">🔥</div>
-            <div class="feat-body">
-              <strong>Chaleur thérapeutique 45°C</strong>
-              <span>Dilate les pores, active la microcirculation. Les soins pénètrent 3× plus profondément.</span>
-              <div class="feat-tag">Infrarouge profond</div>
-            </div>
-          </div>
-          <div class="feat-item">
-            <div class="feat-icon">⚡</div>
-            <div class="feat-body">
-              <strong>Micro-courants EMS haute fréquence</strong>
-              <span>Stimule les 43 muscles du visage. Lifting naturel visible sans aiguille ni douleur.</span>
-              <div class="feat-tag">EMS professionnel</div>
-            </div>
-          </div>
-          <div class="feat-item">
-            <div class="feat-icon">〜</div>
-            <div class="feat-body">
-              <strong>Vibration 8 000 cycles/min</strong>
-              <span>Drainage lymphatique complet. Réduit les poches et le double menton en 5 min.</span>
-              <div class="feat-tag">8 000 RPM</div>
-            </div>
-          </div>
-          <div class="feat-item">
-            <div class="feat-icon">🎛️</div>
-            <div class="feat-body">
-              <strong>4 modes ajustables · USB</strong>
-              <span>Personnalise l'intensité. Batterie longue durée, charge USB universelle.</span>
-              <div class="feat-tag">Plug & Play</div>
-            </div>
-          </div>
-        </div>
-        <a href="product.html" class="btn btn-primary btn-full" style="margin-top:24px">Commander maintenant — 49,99€ →</a>
-      </div>
+      <a href="product.html" class="btn btn-primary" style="margin-top:24px;width:100%;padding:16px;font-size:15px">Commander — 49,99€ →</a>
     </div>
   </div>
 </section>
 
-<!-- AVANT/APRÈS -->
-<section class="ba-section section" id="resultats">
-  <div class="container">
-    <div class="section-header" data-reveal>
+<!-- ═══ AVANT/APRÈS — image product-4 (split face) ═══ -->
+<section class="ba-section" id="resultats">
+  <div class="ba-inner">
+
+    <!-- IMAGE AVANT/APRÈS côté gauche -->
+    <div data-reveal>
+      <div class="ba-image-wrap">
+        <img src="image/product-4.jpg" alt="Skynira — avant et après utilisation, transformation visible">
+      </div>
+    </div>
+
+    <!-- CONTENU côté droit -->
+    <div class="ba-content" data-reveal data-delay="2">
       <span class="eyebrow">Transformation</span>
-      <h2>Ce qui change en <span class="glow-text">2 semaines</span></h2>
-      <p class="sub">5 minutes par jour. Des résultats que tu vois — et que les autres remarquent.</p>
-    </div>
-    <div class="ba-wrap" data-reveal>
-      <div class="ba-col ba-before">
-        <div class="ba-label">Avant Skynira</div>
-        <div class="ba-items">
-          <div class="ba-item">Visage gonflé le matin</div>
-          <div class="ba-item">Teint terne et fatigué</div>
-          <div class="ba-item">Double menton visible</div>
-          <div class="ba-item">Rides d'expression marquées</div>
-          <div class="ba-item">Pores dilatés</div>
-          <div class="ba-item">150€ / mois en institut</div>
+      <h2 class="section-title">Ce qui change en <span class="glow-text">2 semaines</span></h2>
+      <p style="color:var(--text2);font-size:15px">5 minutes par jour. Des résultats que tu vois — et que les autres remarquent.</p>
+
+      <div class="ba-labels">
+        <span class="ba-label before">Avant Skynira</span>
+        <span class="ba-label after">Après Skynira</span>
+      </div>
+      <div class="ba-items">
+        <div class="ba-row">
+          <div class="ba-item ba-before-item">Visage gonflé le matin</div>
+          <div class="ba-item ba-after-item">Visage liftée et défini</div>
+        </div>
+        <div class="ba-row">
+          <div class="ba-item ba-before-item">Teint terne et fatigué</div>
+          <div class="ba-item ba-after-item">Teint lumineux et éclatant</div>
+        </div>
+        <div class="ba-row">
+          <div class="ba-item ba-before-item">Double menton visible</div>
+          <div class="ba-item ba-after-item">Ovale redessiné</div>
+        </div>
+        <div class="ba-row">
+          <div class="ba-item ba-before-item">150€ / mois en institut</div>
+          <div class="ba-item ba-after-item">Paiement unique — 49,99€</div>
         </div>
       </div>
-      <div class="ba-sep"><div class="ba-vs">VS</div></div>
-      <div class="ba-col ba-after">
-        <div class="ba-label">Après Skynira</div>
-        <div class="ba-items">
-          <div class="ba-item win">Visage liftée et défini</div>
-          <div class="ba-item win">Teint lumineux et éclatant</div>
-          <div class="ba-item win">Ovale du visage redessiné</div>
-          <div class="ba-item">Rides visiblement atténuées</div>
-          <div class="ba-item">Peau lissée et repulpée</div>
-          <div class="ba-item win">Paiement unique — 49,99€</div>
-        </div>
+      <a href="product.html" class="btn btn-primary" style="width:100%;padding:16px;font-size:15px">Je veux ce résultat →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LIFESTYLE MIROIR — image product-5 (femme robe blanche miroir) ═══ -->
+<section class="lifestyle-section" id="lifestyle">
+  <div class="lifestyle-inner">
+    <div class="lifestyle-content" data-reveal>
+      <span class="eyebrow">Rituel quotidien</span>
+      <h2 class="section-title">5 minutes.<br><span class="glow-text">Chaque matin.</span><br>Pour toujours.</h2>
+      <p style="color:var(--text2);font-size:15px;line-height:1.75">
+        Intègre Skynira dans ta routine du matin. Avant le sérum, avant la crème solaire. Juste 5 minutes qui changent tout ce que tu vois dans le miroir.
+      </p>
+      <div class="check-list">
+        <div class="check-item">Pas besoin de rendez-vous ni de déplacement</div>
+        <div class="check-item">Utilisable en pyjama, en robe de bain, n'importe où</div>
+        <div class="check-item">Résultats cumulatifs — chaque jour compte</div>
+        <div class="check-item">Compatible avec tous tes soins existants</div>
+      </div>
+      <a href="product.html" class="btn btn-primary" style="width:100%;padding:16px;font-size:15px;margin-top:8px">Commander — 49,99€ →</a>
+    </div>
+
+    <!-- IMAGE miroir salle de bain -->
+    <div data-reveal data-delay="2">
+      <div class="lifestyle-img">
+        <img src="image/product-5.jpg" alt="Skynira — routine beauté du matin devant le miroir">
       </div>
     </div>
   </div>
 </section>
 
-<!-- COMPARATIF -->
-<section class="section" id="comparatif">
+<!-- ═══ COMPARATIF ═══ -->
+<section style="background:var(--bg2);border-top:1px solid var(--border);padding:96px 0" id="comparatif">
   <div class="container">
     <div class="section-header" data-reveal>
       <span class="eyebrow">Comparatif</span>
-      <h2>Pourquoi <span class="glow-text">Skynira</span> gagne</h2>
+      <h2 class="section-title">Pourquoi <span class="glow-text">Skynira</span> gagne</h2>
     </div>
     <div class="compare-wrap" data-reveal>
       <table class="compare-table">
@@ -566,16 +546,16 @@
   </div>
 </section>
 
-<!-- AVIS -->
+<!-- ═══ AVIS ═══ -->
 <section class="reviews-section section" id="avis">
   <div class="container">
     <div class="section-header" data-reveal>
       <span class="eyebrow">⭐ Avis vérifiés</span>
-      <h2>847 femmes ont déjà <span class="glow-text">transformé</span> leur visage</h2>
+      <h2 class="section-title">847 femmes ont déjà <span class="glow-text">transformé</span> leur visage</h2>
     </div>
     <div class="reviews-grid">
-      <div class="card" style="display:flex;flex-direction:column" data-reveal data-delay="1">
-        <div class="stars review-stars">★★★★★</div>
+      <div class="card review-card" data-reveal data-delay="1">
+        <div class="review-stars">★★★★★</div>
         <div class="review-title">"Résultat visible dès J+1"</div>
         <p class="review-text">"Je l'utilise depuis 3 semaines et mes collègues me demandent si j'ai changé quelque chose. Mon visage est vraiment plus défini chaque matin. Je ne pensais pas que ça marcherait aussi vite."</p>
         <div class="review-footer">
@@ -586,8 +566,8 @@
           <div class="rev-verified">✓ Vérifié</div>
         </div>
       </div>
-      <div class="card" style="display:flex;flex-direction:column" data-reveal data-delay="2">
-        <div class="stars review-stars">★★★★★</div>
+      <div class="card review-card" data-reveal data-delay="2">
+        <div class="review-stars">★★★★★</div>
         <div class="review-title">"J'ai annulé mon abonnement institut"</div>
         <p class="review-text">"Je payais 120€/mois en institut. Maintenant je fais ça chez moi en 5 minutes. Le résultat est vraiment comparable. J'ai économisé plus de 700€ en 6 mois."</p>
         <div class="review-footer">
@@ -598,10 +578,10 @@
           <div class="rev-verified">✓ Vérifié</div>
         </div>
       </div>
-      <div class="card" style="display:flex;flex-direction:column" data-reveal data-delay="3">
-        <div class="stars review-stars">★★★★★</div>
+      <div class="card review-card" data-reveal data-delay="3">
+        <div class="review-stars">★★★★★</div>
         <div class="review-title">"Mon double menton a vraiment diminué"</div>
-        <p class="review-text">"Franchement sceptique au départ. Après 2 semaines, mon double menton s'est réduit de façon visible. Mon mari l'a remarqué sans que je lui dise quoi que ce soit."</p>
+        <p class="review-text">"Franchement sceptique au départ. Après 2 semaines d'utilisation le matin, mon double menton s'est réduit de façon visible. Mon mari l'a remarqué sans que je lui dise."</p>
         <div class="review-footer">
           <div style="display:flex;align-items:center;gap:10px">
             <div class="rev-av">C</div>
@@ -614,12 +594,12 @@
   </div>
 </section>
 
-<!-- GARANTIE -->
+<!-- ═══ GARANTIE ═══ -->
 <section class="section" id="garantie">
   <div class="container">
     <div class="section-header" data-reveal>
       <span class="eyebrow">Notre promesse</span>
-      <h2>Zéro risque. <span class="glow-text">100% satisfaite</span><br>ou remboursée.</h2>
+      <h2 class="section-title">Zéro risque. <span class="glow-text">100% satisfaite</span><br>ou remboursée.</h2>
     </div>
     <div class="g-grid">
       <div class="card" data-reveal data-delay="1">
@@ -646,12 +626,12 @@
   </div>
 </section>
 
-<!-- FINAL CTA -->
+<!-- ═══ FINAL CTA ═══ -->
 <section class="final-section">
   <div class="container">
     <div data-reveal>
-      <h2 style="margin-bottom:16px">Prête à <span class="glow-text">transformer</span><br>ton visage ?</h2>
-      <p style="font-size:17px;max-width:480px;margin:0 auto 40px">Rejoins les 847 femmes qui ont choisi Skynira. Vois la différence dès la première utilisation.</p>
+      <h2 class="section-title" style="margin-bottom:16px">Prête à <span class="glow-text">transformer</span><br>ton visage ?</h2>
+      <p style="font-size:17px;max-width:480px;margin:0 auto 40px;color:var(--text2)">Rejoins les 847 femmes qui ont choisi Skynira. Vois la différence dès la première utilisation.</p>
       <a href="product.html" class="btn btn-primary btn-primary-lg">Commander maintenant — 49,99€</a>
       <div style="display:flex;justify-content:center;gap:28px;margin-top:24px;flex-wrap:wrap">
         <span class="hero-micro-item"><div class="pulse-dot"></div> Livraison offerte</span>
@@ -708,6 +688,7 @@
   </div>
 </footer>
 
+<!-- STICKY BAR -->
 <div class="sticky-bar">
   <div class="sticky-info">
     <strong>Gua Sha Pro 4-en-1</strong><br>
