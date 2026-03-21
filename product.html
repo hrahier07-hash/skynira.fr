@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gua Sha Pro 4-en-1 — Skynira | Commander</title>
-  <meta name="description" content="Commandez le Gua Sha Pro 4-en-1 Skynira. Lifting visage professionnel chez soi. Chaleur 45°C, EMS, vibration. 49,99€. Livraison offerte. Garantie 30 jours.">
+  <meta name="description" content="Commandez le Gua Sha Pro 4-en-1 Skynira. Lifting visage professionnel chez soi. Chaleur 45°C, EMS, vibration. 39,99€. Livraison offerte. Garantie 30 jours.">
   <link rel="stylesheet" href="css/style.css">
   <style>
     .product-section {
@@ -224,7 +224,7 @@
         <div class="nav-trust-item"><span style="color:var(--green)">●</span> Paiement sécurisé</div>
         <div class="nav-trust-item">⭐ 4.9/5</div>
       </div>
-      <a href="#order" class="btn btn-primary" style="padding:10px 20px;font-size:13px">Commander — 49,99€</a>
+      <a href="#order" class="btn btn-primary" style="padding:10px 20px;font-size:13px">Commander — 39,99€</a>
     </div>
   </div>
 </nav>
@@ -248,23 +248,23 @@
         <span class="badge badge-accent">−50%</span>
         <span class="badge badge-red">⚡ Stock limité</span>
       </div>
-      <img class="main-img" src="images/product-1.jpg" alt="Skynira Gua Sha Pro 4-en-1" onerror="this.style.minHeight='400px';this.style.background='var(--bg3)'">
+      <img class="main-img" src="image/product-1.jpg" alt="Skynira Gua Sha Pro 4-en-1" onerror="this.style.minHeight='400px';this.style.background='var(--bg3)'">
     </div>
     <div class="thumbs-grid product-media">
-      <div class="thumb active" data-src="images/product-1.jpg">
-        <img src="images/product-1.jpg" alt="Vue 1" onerror="this.parentElement.style.background='var(--bg3)'">
+      <div class="thumb active" data-src="image/product-1.jpg">
+        <img src="image/product-1.jpg" alt="Vue 1" onerror="this.parentElement.style.background='var(--bg3)'">
       </div>
-      <div class="thumb" data-src="images/product-2.jpg">
-        <img src="images/product-2.jpg" alt="Vue 2" onerror="this.parentElement.style.background='var(--bg3)'">
+      <div class="thumb" data-src="image/product-2.jpg">
+        <img src="image/product-2.jpg" alt="Vue 2" onerror="this.parentElement.style.background='var(--bg3)'">
       </div>
-      <div class="thumb" data-src="images/product-3.jpg">
-        <img src="images/product-3.jpg" alt="Vue 3" onerror="this.parentElement.style.background='var(--bg3)'">
+      <div class="thumb" data-src="image/product-3.jpg">
+        <img src="image/product-3.jpg" alt="Vue 3" onerror="this.parentElement.style.background='var(--bg3)'">
       </div>
-      <div class="thumb" data-src="images/product-4.jpg">
-        <img src="images/product-4.jpg" alt="Vue 4" onerror="this.parentElement.style.background='var(--bg3)'">
+      <div class="thumb" data-src="image/product-4.jpg">
+        <img src="image/product-4.jpg" alt="Vue 4" onerror="this.parentElement.style.background='var(--bg3)'">
       </div>
-      <div class="thumb" data-src="images/product-5.jpg">
-        <img src="images/product-5.jpg" alt="Vue 5" onerror="this.parentElement.style.background='var(--bg3)'">
+      <div class="thumb" data-src="image/product-5.jpg">
+        <img src="image/product-5.jpg" alt="Vue 5" onerror="this.parentElement.style.background='var(--bg3)'">
       </div>
     </div>
   </div>
@@ -289,7 +289,7 @@
     </div>
 
     <div class="price-box">
-      <span class="price-big">49,99€</span>
+      <span class="price-big">39,99€</span>
       <span class="price-was">99€</span>
       <span class="price-badge">Économise 49€</span>
     </div>
@@ -354,7 +354,7 @@
     </div>
 
     <div class="cta-wrap" id="cta">
-      <button class="btn btn-primary btn-primary-lg btn-full btn-add-to-cart">
+      <button class="btn btn-primary btn-primary-lg btn-full" onclick="window.location.href='METTRE_LIEN_SHOPIFY_ICI'">
         🛒 Ajouter au panier →
       </button>
       <button class="btn-paypal">
@@ -523,7 +523,7 @@
   </div>
   <div class="sticky-right">
     <span class="sticky-old">99€</span>
-    <span class="sticky-price">49,99€</span>
+    <span class="sticky-price">39,99€</span>
     <button class="btn btn-primary btn-add-to-cart" style="padding:12px 22px;font-size:14px">Ajouter au panier →</button>
   </div>
 </div>
@@ -539,3 +539,20 @@ function switchTab(btn, id) {
 </script>
 </body>
 </html>
+<!-- Mobile fixes injected -->
+<style>
+/* PRODUCT PAGE MOBILE FIXES */
+@media(max-width:768px){
+  .product-section{grid-template-columns:1fr!important;padding:20px 16px!important;gap:24px!important}
+  .product-media{position:static!important}
+  .main-img-wrap{aspect-ratio:1!important;border-radius:12px!important}
+  .thumbs-grid{grid-template-columns:repeat(4,1fr)!important}
+  .tabs{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .tab-btn{white-space:nowrap;font-size:13px!important;padding:14px 14px!important}
+  .details-section{padding:0 16px 60px!important}
+  .specs-grid{grid-template-columns:1fr!important}
+  .product-title{font-size:clamp(24px,6vw,36px)!important}
+  .price-big{font-size:clamp(30px,8vw,42px)!important}
+}
+.main-img-wrap img{width:100%!important;height:100%!important;object-fit:cover!important;display:block!important}
+</style>
