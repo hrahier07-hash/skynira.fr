@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Skynira | Service Client Français</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .contact-page { max-width: 960px; margin: 0 auto; padding: 64px 28px 96px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+    .form-label { font-size: 13px; font-weight: 500; color: var(--text2); }
+    .form-input, .form-textarea {
+      background: var(--bg3); border: 1.5px solid var(--border2);
+      border-radius: var(--r); padding: 13px 16px;
+      font-size: 15px; color: var(--text); font-family: 'Inter', sans-serif;
+      transition: border-color 0.2s; outline: none; width: 100%;
+    }
+    .form-input:focus, .form-textarea:focus { border-color: var(--accent); }
+    .form-textarea { resize: vertical; min-height: 130px; }
+    .form-input::placeholder, .form-textarea::placeholder { color: var(--text3); }
+    .contact-info { display: flex; flex-direction: column; gap: 16px; }
+    .contact-card {
+      padding: 20px; background: var(--bg3); border: 1px solid var(--border);
+      border-radius: var(--r); display: flex; align-items: flex-start; gap: 14px;
+    }
+    .contact-icon {
+      width: 42px; height: 42px; background: var(--accent-bg); border: 1px solid var(--accent-border);
+      border-radius: var(--r-sm); display: flex; align-items: center; justify-content: center;
+      font-size: 20px; flex-shrink: 0;
+    }
+    .contact-card strong { display: block; font-size: 14px; font-weight: 600; margin-bottom: 3px; }
+    .contact-card span { font-size: 13px; color: var(--text2); }
+    @media (max-width: 768px) { .contact-page { grid-template-columns: 1fr; gap: 40px; padding: 40px 14px; } }
+  </style>
+</head>
+<body>
+
+<div class="topbar">Offre limitée — <strong>−50%</strong> aujourd'hui · Livraison offerte · Garantie 30 jours</div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Sky<span>nira</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Accueil</a></li>
+      <li><a href="product.html" class="nav-link">Le Produit</a></li>
+      <li><a href="faq.html" class="nav-link">FAQ</a></li>
+      <li><a href="contact.html" class="nav-link" style="color:var(--text)">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="product.html" class="btn btn-primary" style="padding:10px 20px;font-size:13px">Commander — 39,99€</a>
+    </div>
+  </div>
+</nav>
+
+<div style="background:var(--bg2);border-bottom:1px solid var(--border);padding:48px 0 40px;text-align:center">
+  <div class="container">
+    <span class="eyebrow" style="margin-bottom:14px;display:inline-flex">Service client</span>
+    <h1 style="font-size:clamp(28px,4vw,46px);margin-bottom:12px">On est là pour toi</h1>
+    <p style="max-width:460px;margin:0 auto">Réponse garantie en moins de 2h en semaine. N'hésite pas à nous écrire.</p>
+  </div>
+</div>
+
+<div class="contact-page">
+  <div data-reveal>
+    <h2 style="font-size:24px;margin-bottom:24px">Envoie-nous un message</h2>
+    <form onsubmit="handleForm(event)">
+      <div class="form-group">
+        <label class="form-label">Prénom et nom</label>
+        <input type="text" class="form-input" placeholder="Sophie Martin" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-input" placeholder="sophie@email.fr" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Numéro de commande (optionnel)</label>
+        <input type="text" class="form-input" placeholder="SKY-XXXXX">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Sujet</label>
+        <select class="form-input" style="cursor:pointer">
+          <option>Suivi de commande</option>
+          <option>Remboursement / Retour</option>
+          <option>Question produit</option>
+          <option>Problème technique</option>
+          <option>Autre</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Message</label>
+        <textarea class="form-textarea" placeholder="Décris ta demande en détail..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-full" style="margin-top:8px">Envoyer le message →</button>
+    </form>
+  </div>
+
+  <div data-reveal data-delay="2">
+    <h2 style="font-size:24px;margin-bottom:24px">Nos coordonnées</h2>
+    <div class="contact-info">
+      <div class="contact-card">
+        <div class="contact-icon">✉️</div>
+        <div>
+          <strong>Email</strong>
+          <span><a href="mailto:hrahier07@gmail.com" style="color:var(--accent)">hrahier07@gmail.com</a><br>Réponse sous 2h en semaine</span>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">⏰</div>
+        <div>
+          <strong>Horaires SAV</strong>
+          <span>Lundi – Vendredi : 9h – 18h<br>Samedi : 10h – 14h</span>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">🚚</div>
+        <div>
+          <strong>Suivi de commande</strong>
+          <span>Tu recevras un email avec ton numéro de suivi dès l'expédition.</span>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">🛡️</div>
+        <div>
+          <strong>Garantie 30 jours</strong>
+          <span>Pas satisfaite ? On te rembourse intégralement. Sans question.</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:24px;padding:20px;background:var(--accent-bg);border:1px solid var(--accent-border);border-radius:var(--r)">
+      <p style="font-size:14px;color:var(--accent);font-weight:500;margin-bottom:8px">Consulte d'abord la FAQ</p>
+      <p style="font-size:13px;color:var(--text2)">La plupart des questions ont déjà une réponse dans notre FAQ.</p>
+      <a href="faq.html" class="btn btn-outline" style="margin-top:14px;padding:10px 18px;font-size:13px">Voir la FAQ →</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-logo">Sky<span>nira</span></div><p class="footer-desc">La technologie de lifting professionnel, accessible chez toi.</p></div>
+      <div class="footer-col"><h4>Boutique</h4><ul><li><a href="product.html">Gua Sha Pro 4-en-1</a></li></ul></div>
+      <div class="footer-col"><h4>Service client</h4><ul><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Légal</h4><ul><li><a href="cgv.html">CGV</a></li><li><a href="confidentialite.html">Confidentialité</a></li><li><a href="mentions.html">Mentions légales</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Skynira. Tous droits réservés.</span><div class="footer-bottom-links"><a href="cgv.html">CGV</a><a href="confidentialite.html">Confidentialité</a></div></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+function handleForm(e) {
+  e.preventDefault();
+  const form = e.target;
+  const name = form.querySelector('input[type="text"]').value;
+  const email = form.querySelector('input[type="email"]').value;
+  const order = form.querySelectorAll('input[type="text"]')[1]?.value || '';
+  const subject = form.querySelector('select').value;
+  const message = form.querySelector('textarea').value;
+
+  const mailtoSubject = encodeURIComponent('[Skynira] ' + subject + (order ? ' — Commande ' + order : ''));
+  const mailtoBody = encodeURIComponent('Prénom et nom : ' + name + '\nEmail : ' + email + '\nNuméro de commande : ' + (order || 'N/A') + '\nSujet : ' + subject + '\n\nMessage :\n' + message);
+  window.location.href = 'mailto:hrahier07@gmail.com?subject=' + mailtoSubject + '&body=' + mailtoBody;
+
+  const btn = form.querySelector('button[type="submit"]');
+  btn.textContent = '✓ Ouverture de votre messagerie...';
+  btn.style.background = '#3ECFA0';
+  btn.style.color = '#0B0B0F';
+  setTimeout(() => {
+    btn.textContent = 'Envoyer le message →';
+    btn.style.background = '';
+    btn.style.color = '';
+    btn.disabled = false;
+  }, 3000);
+}
+</script>
+</body>
+</html>
